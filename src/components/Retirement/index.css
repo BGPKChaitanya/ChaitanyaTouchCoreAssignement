@@ -1,0 +1,62 @@
+.rs-container {
+  padding: 15px;
+  background-color: #ced8e0;
+  border-radius: 25px;
+  width: 100%;
+  margin: 0;
+}
+.retire-container {
+  margin: 25px;
+}
+.r-heading {
+  font-size: 20px;
+}
+.update-button {
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  border-radius: 8px;
+  width: 125px;
+  margin-top: 15px;
+  width: 100%;
+}
+.rate-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.para {
+  margin-left: 10px;
+}
+.view-more-button {
+  color: blue;
+  padding: 15px;
+  width: 100%;
+}
+.house-para {
+  word-wrap: break-word;
+  margin: 0px;
+  font-size: 15px;
+}
+.text-span {
+  font-weight: bold;
+}
+.offer-container {
+  padding: 8px;
+  border-left: solid;
+  border-width: 1px;
+  margin-top: 10px;
+}
+.l-para {
+  margin: 0px;
+  font-size: 13px;
+  color: gray;
+}
+.learn-more-button {
+  color: blue;
+  margin: 0px;
+  font-size: 13px;
+}

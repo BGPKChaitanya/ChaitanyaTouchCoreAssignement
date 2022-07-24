@@ -1,0 +1,36 @@
+.sidebar-container {
+  height: 100vh;
+  width: 60px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-size: cover;
+}
+
+button {
+  background-color: transparent;
+  border-style: none;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  color: grey;
+}
+
+.home-container {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.search-container {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bell-container {
+  flex-wrap: wrap;
+}
