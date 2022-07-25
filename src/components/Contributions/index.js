@@ -1,11 +1,6 @@
-import {CircularProgressbar, buildStyles} from 'react-circular-progressbar'
-import 'react-circular-progressbar/dist/styles.css'
 import Chart from '../Chart'
+import CircleProgressBar from '../CircleProgressBar'
 import './index.css'
-
-const Average = 78
-const Top = 95
-const mine = 59
 
 const Contributions = () => (
   <div className="contributions-container">
@@ -17,18 +12,18 @@ const Contributions = () => (
         <p className="amount-des">My Goal</p>
         <hr className="hor-line" />
       </div>
-      <div className="goal-inner-container">
+      <div className="goal-inner-container2">
         <h1 className="amount">59%</h1>
         <p className="amount-des">Goal Achieved</p>
         <hr className="hor-line" />
       </div>
-      <div className="goal-inner-container">
+      <div className="goal-inner-container2">
         <h1 className="amount">$300</h1>
         <p className="amount-des">Est. Monthly Income</p>
         <hr className="hor-line" />
       </div>
     </div>
-    <p className="para1">Contribution Overtime</p>
+    <p className="para1 contribute">Contribution Overtime</p>
     <Chart />
     <p className="para1">How do I compare to my peers?</p>
     <p className="para2">These numbers represent current goal achievement</p>
@@ -74,45 +69,9 @@ const Contributions = () => (
         <hr />
       </div>
       <div className="radial-graph-container">
-        <div style={{width: 75, height: 75}} className="radial-graph">
-          <CircularProgressbar
-            value={Average}
-            text={`${Average}%`}
-            styles={buildStyles({
-              strokeLinecap: 'butt',
-              pathColor: `#338754`,
-              textColor: '#000000',
-              trailColor: '#d6d6d6',
-            })}
-          />
-          <p className="para5">Average</p>
-        </div>
-        <div style={{width: 75, height: 75}} className="radial-graph">
-          <CircularProgressbar
-            value={Top}
-            text={`${Top}%`}
-            styles={buildStyles({
-              strokeLinecap: 'butt',
-              pathColor: `#338754`,
-              textColor: '#000000',
-              trailColor: '#d6d6d6',
-            })}
-          />
-          <p className="para5">Top</p>
-        </div>
-        <div style={{width: 75, height: 75}} className="radial-graph">
-          <CircularProgressbar
-            value={mine}
-            text={`${mine}%`}
-            styles={buildStyles({
-              strokeLinecap: 'butt',
-              pathColor: `#338754`,
-              textColor: '#000000',
-              trailColor: '#d6d6d6',
-            })}
-          />
-          <p className="para5">Me</p>
-        </div>
+        <CircleProgressBar value={78} name="Average" />
+        <CircleProgressBar value={95} name="Top" />
+        <CircleProgressBar value={59} name="Me" />
       </div>
     </div>
   </div>

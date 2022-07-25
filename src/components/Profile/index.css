@@ -1,6 +1,11 @@
 .profile-container {
+  display: flex;
+  flex-direction: row;
+}
+.profile-bar {
   padding: 30px;
   background-color: #edf2f5;
+  background-size: cover;
 }
 .para1 {
   font-weight: bold;
@@ -59,4 +64,17 @@
   border-radius: 8px;
   width: 125px;
   margin-top: 25px;
+}
+.visible-bar {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .side-bar-container {
+    display: none;
+  }
+  .profile-bar {
+    width: 100%;
+    margin: 0px;
+  }
 }

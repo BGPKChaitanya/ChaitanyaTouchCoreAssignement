@@ -1,0 +1,11 @@
+.bottom-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 5px;
+  margin: 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #ffffff;
+}

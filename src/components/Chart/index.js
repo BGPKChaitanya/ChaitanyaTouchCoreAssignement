@@ -1,4 +1,12 @@
-import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend} from 'recharts'
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Legend,
+  ResponsiveContainer,
+} from 'recharts'
 
 const data = [
   {
@@ -49,25 +57,31 @@ const Chart = () => {
   const DataFormatter = number => `$${number.toString()}`
 
   return (
-    <BarChart
-      width={500}
-      height={250}
-      data={data}
-      margin={{
-        top: 20,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis tickFormatter={DataFormatter} />
-      <Legend position="top" />
-      <Bar dataKey="Employer" stackId="a" fill="#020e38" barSize={30} />
-      <Bar dataKey="Employee" stackId="a" fill="#3c53a3" barSize={30} />
-      <Bar dataKey="Interest" stackId="a" fill="#6c85d9" barSize={30} />
-    </BarChart>
+    <ResponsiveContainer height={250} width="100%">
+      <BarChart data={data} margin={5}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis
+          dataKey="name"
+          tick={{
+            stroke: '#000000',
+            strokeWidth: 0.5,
+            fontSize: 10,
+          }}
+        />
+        <YAxis
+          tickFormatter={DataFormatter}
+          tick={{
+            stroke: '#000000',
+            strokeWidth: 0.5,
+            fontSize: 10,
+          }}
+        />
+        <Legend position="top" wrapperStyle={{fontSize: 13}} />
+        <Bar dataKey="Employer" stackId="a" fill="#020e38" barSize={25} />
+        <Bar dataKey="Employee" stackId="a" fill="#3c53a3" barSize={25} />
+        <Bar dataKey="Interest" stackId="a" fill="#6c85d9" barSize={25} />
+      </BarChart>
+    </ResponsiveContainer>
   )
 }
 
